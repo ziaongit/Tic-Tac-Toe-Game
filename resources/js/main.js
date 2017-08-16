@@ -76,6 +76,7 @@ $('.box').click(function(){
   
   if(gameState){
     $('.winner').html('<p>Game over: '+gameState+' is the winner</p>');
+    setTimeout(function() { $('.winner').html(''); }, 5000);
     return;
   }else {
     const move = computerMove();
@@ -86,6 +87,7 @@ $('.box').click(function(){
   gameState = gameOver();
   if(gameState) {
     $('.winner').html('<p>Game over: '+gameState+' is the winner</p>');
+    setTimeout(function() { $('.winner').html(''); }, 5000);
   }
 
 });
